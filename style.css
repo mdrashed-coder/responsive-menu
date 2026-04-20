@@ -125,3 +125,12 @@ body{
     
     
 }
+@media (max-width:500px) {
+    .nav-menu li a{
+        font-size: 1rem;
+    }
+    .logo{
+        font-size: 1.5rem;
+    }
+    
+}
