@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url('https://images.pexels.com/photos/36634665/pexels-photo-36634665.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.nav-bar{
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .5)
+    ;
+}
+.nav-contenor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.logo{
+    text-decoration: none;
+    font-size: 2rem;
+    color: tomato;
+    font-weight: 700;
+
+}
+.nav-menu{
+    display: flex;
+    list-style: none;
+    gap: 1.3rem;
+    
+}
+.nav-menu li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    padding: 10px 12px;
+    background: transparent;
+    border-radius: 15px;
+    border: 2px solid transparent;
+
+}
+.nav-menu li a:hover{
+    background: rgb(189, 188, 188);
+    border: 2px solid rgb(50, 50, 50);
+    color: rgb(34, 34, 34);
+
+}
+.nav-menu li a:active{
+    background: rgb(189, 188, 188);
+    border: 2px solid rgb(50, 50, 50);
+    color: rgb(34, 34, 34);
+
+}
+.nav-toggle{
+    display: none;
+    background: transparent;
+    width: 25px;
+    z-index: 999;
+    padding: 10px;
+    
+}
+.nav-toggle .bar{
+    display: block;
+    background: white;
+    width: 25px;
+    height: 3px;
+    border: none;
+    margin: 5px auto;
+    /* transition: all 0.3s ease-in-out; */
+    
+
+
+}
+
+@media (max-width:880px) {
+    .nav-menu{
+        display: none;
+        flex-direction: column;
+        gap: 1.7rem !important;
+        background: transparent;
+        width: 250px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0, 10px 20px rgba(0, 0, 0, .5);
+
+    }
+
+/* Jokhon JS 'active' class add korbe, tokhon dekhabe */
+.nav-menu.active {
+    display: flex; /* ba flex */
+}
+    .nav-toggle{
+        display: block;
+        z-index: 999;
+    }
+    .nav-toggle:active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .nav-toggle:active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .nav-toggle:active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    
+}
